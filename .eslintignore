@@ -1,0 +1,5 @@
+/assets/
+/dist/
+/wordpress/**
+/vendor/
+!.eslintrc.js
