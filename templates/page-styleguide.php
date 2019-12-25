@@ -2,13 +2,13 @@
 /**
  * Template Name: Style Guide
  *
- * @package Eri
+ * @package EriScaffold
  */
 
-namespace Eri\Utility;
+namespace EriScaffold\Utility;
 
-use function Eri\Utility\adjust_brightness;
-use function Eri\Utility\get_colors;
+use function EriScaffold\Utility\adjust_brightness;
+use function EriScaffold\Utility\get_colors;
 
 get_header();
 ?>

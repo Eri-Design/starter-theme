@@ -5,7 +5,7 @@
  * @package ThemeScaffold\Core
  */
 
-namespace Eri\Blocks;
+namespace EriScaffold\Blocks;
 
 /**
  * Set up blocks
@@ -32,9 +32,9 @@ function blocks_scripts() {
 
 	wp_enqueue_script(
 		'blocks',
-		ERI_TEMPLATE_URL . '/dist/js/blocks.js',
+		ERI_SCAFFOLD_TEMPLATE_URL . '/dist/js/blocks.js',
 		[],
-		ERI_VERSION,
+		ERI_SCAFFOLD_VERSION,
 		true
 	);
 }
@@ -49,17 +49,17 @@ function blocks_editor_scripts() {
 
 	wp_enqueue_script(
 		'blocks-editor',
-		ERI_TEMPLATE_URL . '/dist/js/blocks-editor.js',
+		ERI_SCAFFOLD_TEMPLATE_URL . '/dist/js/blocks-editor.js',
 		[ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components' ],
-		ERI_VERSION,
+		ERI_SCAFFOLD_VERSION,
 		false
 	);
 
 	wp_enqueue_style(
 		'editor-style',
-		ERI_TEMPLATE_URL . '/dist/css/editor-style.min.css',
+		ERI_SCAFFOLD_TEMPLATE_URL . '/dist/css/editor-style.min.css',
 		[],
-		ERI_VERSION
+		ERI_SCAFFOLD_VERSION
 	);
 
 }

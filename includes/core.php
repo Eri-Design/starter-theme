@@ -2,10 +2,10 @@
 /**
  * Core setup, site hooks and filters.
  *
- * @package Eri\Core
+ * @package EriScaffold\Core
  */
 
-namespace Eri\Core;
+namespace EriScaffold\Core;
 
 /**
  * Set up theme defaults and register supported WordPress features.
@@ -31,13 +31,13 @@ function setup() {
  * Makes Theme available for translation.
  *
  * Translations can be added to the /languages directory.
- * If you're building a theme based on "eri", change the
- * filename of '/languages/Eri.pot' to the name of your project.
+ * If you're building a theme based on "eri-scaffold", change the
+ * filename of '/languages/EriScaffold.pot' to the name of your project.
  *
  * @return void
  */
 function i18n() {
-	load_theme_textdomain( 'eri', ERI_PATH . '/languages' );
+	load_theme_textdomain( 'eri-scaffold', ERI_SCAFFOLD_PATH . '/languages' );
 }
 
 /**
@@ -72,18 +72,18 @@ function scripts() {
 
 	wp_enqueue_script(
 		'frontend',
-		ERI_TEMPLATE_URL . '/dist/js/frontend.js',
+		ERI_SCAFFOLD_TEMPLATE_URL . '/dist/js/frontend.js',
 		[],
-		ERI_VERSION,
+		ERI_SCAFFOLD_VERSION,
 		true
 	);
 
 	if ( is_page_template( 'templates/page-styleguide.php' ) ) {
 		wp_enqueue_script(
 			'styleguide',
-			ERI_TEMPLATE_URL . '/dist/js/styleguide.js',
+			ERI_SCAFFOLD_TEMPLATE_URL . '/dist/js/styleguide.js',
 			[],
-			ERI_VERSION,
+			ERI_SCAFFOLD_VERSION,
 			true
 		);
 	}
@@ -99,17 +99,17 @@ function styles() {
 
 	wp_enqueue_style(
 		'styles',
-		ERI_TEMPLATE_URL . '/dist/css/style.css',
+		ERI_SCAFFOLD_TEMPLATE_URL . '/dist/css/style.css',
 		[],
-		ERI_VERSION
+		ERI_SCAFFOLD_VERSION
 	);
 
 	if ( is_page_template( 'templates/page-styleguide.php' ) ) {
 		wp_enqueue_style(
 			'styleguide',
-			ERI_TEMPLATE_URL . '/dist/css/styleguide-style.css',
+			ERI_SCAFFOLD_TEMPLATE_URL . '/dist/css/styleguide-style.css',
 			[],
-			ERI_VERSION
+			ERI_SCAFFOLD_VERSION
 		);
 	}
 }
@@ -166,5 +166,5 @@ function script_loader_tag( $tag, $handle ) {
  * @return void
  */
 function add_manifest() {
-	echo "<link rel='manifest' href='" . esc_url( ERI_TEMPLATE_URL . '/manifest.json' ) . "' />";
+	echo "<link rel='manifest' href='" . esc_url( ERI_SCAFFOLD_TEMPLATE_URL . '/manifest.json' ) . "' />";
 }
