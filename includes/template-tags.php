@@ -8,7 +8,7 @@
  * All functions should be prefixed with EriScaffold in order to prevent
  * pollution of the global namespace and potential conflicts with functions
  * from plugins.
- * Example: `tenup_function()`
+ * Example: `eri_scaffold_function()`
  *
  * @package ThemeScaffold\Template_Tags
  *

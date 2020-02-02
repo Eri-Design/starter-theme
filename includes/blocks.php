@@ -81,8 +81,8 @@ function blocks_categories( $categories, $post ) {
 		$categories,
 		array(
 			array(
-				'slug'  => 'tenup-blocks',
-				'title' => __( 'Custom Blocks', 'tenup' ),
+				'slug'  => 'eri-scaffold-blocks',
+				'title' => __( 'Custom Blocks', 'eri-scaffold' ),
 			),
 		)
 	);
