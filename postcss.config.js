@@ -13,6 +13,9 @@ module.exports = ({ file, options, env }) => ({
 				grid: true,
 			},
 		},
+		'postcss-nested': {},
+		'postcss-custom-media': {},
+		precss: {},
 		// Prefix editor styles with class `editor-styles-wrapper`.
 		'postcss-editor-styles':
 			'editor-style.css' === file.basename
