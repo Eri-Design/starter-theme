@@ -6,7 +6,6 @@
 	--c-uikit-primary: #000;
 
 	@custom-media --bp-uikit-small (min-width: 40.625em);
-
 }
 
 .uikit__container {
@@ -42,7 +41,7 @@
 }
 
 .uikit__colors {
-	font-family: "Courier New", monospace;
+	font-family: 'Courier New', monospace;
 	list-style: none;
 	margin: 0;
 	overflow: hidden;
@@ -133,12 +132,12 @@
 	display: none;
 }
 
-.uikit__section > .heading > .toggle[aria-expanded="true"] .uikit__chevron-up,
+.uikit__section > .heading > .toggle[aria-expanded='true'] .uikit__chevron-up,
 .uikit__chevron-down {
 	display: block;
 }
 
-.uikit__section > .heading > .toggle[aria-expanded="true"] .uikit__chevron-down {
+.uikit__section > .heading > .toggle[aria-expanded='true'] .uikit__chevron-down {
 	display: none;
 }
 
@@ -159,7 +158,6 @@
 }
 
 @media (--bp-uikit-small) {
-
 	.uikit__section > .heading {
 		width: 145px;
 	}
@@ -175,5 +173,4 @@
 	.uikit__section.-secondary > .content {
 		width: 100%;
 	}
-
 }

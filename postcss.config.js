@@ -14,6 +14,7 @@ module.exports = ({ file, options, env }) => ({
 			},
 		},
 		'postcss-nested': {},
+		'postcss-mixins': {},
 		'postcss-custom-media': {},
 		precss: {},
 		// Prefix editor styles with class `editor-styles-wrapper`.
