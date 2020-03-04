@@ -16,7 +16,8 @@
 		"format-js": "eslint --fix assets/js",
 		"lint": "npm run lint-css && npm run lint-js && npm run lint-php",
 		"format": "npm run format-js",
-		"test:a11y": "node tests/accessibility/compliance/pa11y.js"
+		"test:a11y": "node tests/accessibility/compliance/pa11y.js",
+		"package": "tar -cvf ../eri-scaffold.tar ../eri-scaffold --exclude=node_modules/* --exclude=.git/* --exclude=vendor/*"
 	},
 	"husky": {
 		"hooks": {
