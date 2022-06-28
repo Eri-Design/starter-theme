@@ -6,6 +6,10 @@ yarn-debug.log*
 yarn-error.log*
 vendor/
 
+# Archives
+*.zip
+*.tar
+
 # Runtime data
 pids
 *.pid
