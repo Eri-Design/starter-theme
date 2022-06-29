@@ -1,3 +1,1 @@
-import UIKitSection from './uikitsection';
-
-new UIKitSection();
+// Styleguide.js

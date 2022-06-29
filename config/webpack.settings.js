@@ -37,7 +37,6 @@ module.exports = {
 		// Copied from `'minimal'`.
 		all: false,
 		errors: true,
-		maxModules: 0,
 		modules: true,
 		warnings: true,
 		// Our additional options.
@@ -48,7 +47,7 @@ module.exports = {
 		performance: true
 	},
 	copyWebpackConfig: {
-		from: '**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
+		from: 'assets/**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
 		to: '[path][name].[ext]'
 	},
 	BrowserSyncConfig: {

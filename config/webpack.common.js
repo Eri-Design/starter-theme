@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
 const isProduction = 'production' === process.env.NODE_ENV;
@@ -50,16 +51,6 @@ module.exports = {
 	// Build rules to handle asset files.
 	module: {
 		rules: [
-			// Lint JS.
-			{
-				test: /\.js$/,
-				enforce: 'pre',
-				loader: 'eslint-loader',
-				options: {
-					fix: true,
-				},
-			},
-
 			// Scripts.
 			{
 				test: /\.js$/,
@@ -128,13 +119,15 @@ module.exports = {
 		}),
 
 		// Copy static assets to the `dist` folder.
-		new CopyWebpackPlugin([
-			{
-				from: settings.copyWebpackConfig.from,
-				to: settings.copyWebpackConfig.to,
-				context: path.resolve(process.cwd(), settings.paths.src.base),
-			},
-		]),
+		new CopyWebpackPlugin({
+			patterns: [{
+				from:settings.copyWebpackConfig.from,
+				to: settings.copyWebpackConfig.to
+			}],
+		}),
+
+		// Lint JS.
+		new ESLintPlugin(),
 
 		// Lint CSS.
 		new StyleLintPlugin({
